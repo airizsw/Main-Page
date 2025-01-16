@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Admin</title>
+    <link rel="stylesheet" href="add-admin.css">
+    <!-- Font Awesome Link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<header>
+    <div class="logo">
+        <img src="./images/logo.png" alt="Logo">
+    </div>
+    <div class="title" id="header-title">CCSE LAB EQUIPMENT BOOKING SYSTEM</div>
+    <div class="auth-language">
+        <button onclick="location.href='main.php'" class="home-btn">Home</button>
+        <button id="admin-btn" onclick="location.href='admin-dashboard.php'" class="admin-btn">Back</button>
+    </div>
+
+</header>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <img src="./images/logo.png" alt="Company Logo" class="logo">
+            </div>
+        </div>
+        <form class="login-form" action="add-admin.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+            
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <button type="button" id="togglePassword" class="toggle-password">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+            
+            <button type="submit">Add Admin</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; <a >2025 Copyright. All Rights Reserved. | by GROUP 1</a>
+    </footer>
+
+    <script>
+        // Toggle password visibility
+        const passwordField = document.getElementById('password');
+        const toggleButton = document.querySelector('.toggle-password');
+        const toggleIcon = toggleButton.querySelector('i');
+
+        toggleButton.addEventListener('click', () => {
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        });
+    </script>
+</body>
+</html>

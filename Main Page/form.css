@@ -1,0 +1,149 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, img, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #004080;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+header .auth-language {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .auth-language button {
+    background-color: white;
+    color: #004080;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header .auth-language button:hover {
+    background-color: #004080;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Main Content Styling */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.equipment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.equipment-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.equipment-item:hover {
+    transform: scale(1.05);
+}
+
+.equipment-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.equipment-item h4 {
+    margin-bottom: 0.5rem;
+    color: #004080;
+}
+
+.equipment-item p {
+    margin-bottom: 0.5rem;
+}
+
+.equipment-item label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.equipment-item input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.equipment-item button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.equipment-item button:hover {
+    background-color: #003060;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 0.7rem 2rem;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #003060;
+}

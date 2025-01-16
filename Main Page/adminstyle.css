@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+header img {
+    height: 50px;
+}
+header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+.container {
+    margin: 20px;
+}
+.search-bar {
+    margin-bottom: 20px;
+}
+.search-bar input {
+    padding: 10px;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #0078d4;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.equipment-list {
+    gap: 15px;
+}
+.equipment-item {
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.equipment-item img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    background-color: #eaeaea;
+}
+.pagination {
+    margin-top: 20px;
+    justify-content: center;
+    gap: 5px;
+}
+.pagination button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+footer .contact {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.login-container h2 {
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+.dashboard-actions {
+    gap: 15px;
+    margin-top: 20px;
+}
+.dashboard-actions a {
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #0078d4;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.dashboard-actions a:hover {
+    background-color: #005bb5;
+}
+.logout-btn {
+    float: right;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #ff4c4c;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.logo-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-form button {
+    background-color: #1c2e4a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 80PX;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Password Container */
+.password-container {
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+}
+
+.toggle-password {
+    background-color: #1c2e4a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 80PX;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+nav {
+    background-color: #555;
+    color: #fff;
+    padding: 15px;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 15px 0;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+h1 {
+    margin-top: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.table-container {
+    margin-top: 30px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+table th {
+    background-color: #0078d4;
+    color: #fff;
+}
+button {
+    padding: 10px;
+    border: none;
+    background-color: #0078d4;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #005bb5;
+}
+.actions button {
+    margin-right: 5px;
+}

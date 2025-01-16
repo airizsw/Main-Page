@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Form</title>
+    <link rel="stylesheet" href="uform.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="main.php">
+                <img src="./images/logo.png" alt="Logo">
+                </a>
+        </div>
+        <div class="title" id="header-title">CCSE LAB EQUIPMENT BOOKING SYSTEM</div>
+        <div class="auth-language">
+            <button onclick="location.href='main.php'" class="home-btn">Home</button>
+            <button id="admin-btn" onclick="location.href='admin_login.html'" class="admin-btn">Admin Login</button>
+            <div>
+                <button class="language-select" onclick="changeLanguage('bm')">BM</button> / 
+                <button class="language-select" onclick="changeLanguage('eng')">ENG</button>
+            </div>
+        </div>
+    </header>
+    <div class="m-container">
+        <h2 id="form-title">Application Form for Equipment </h2>
+        <form method="POST" action="form-handler.php" onsubmit="return confirmSubmission();" enctype="multipart/form-data">
+            <div class="form-section">     
+                <div class="form-group">
+                    <label id="label-labName" for="nama-tempat">Name of Laboratory / Room / Place:</label>
+                    <input type="text" id="nama-tempat" name="lab_name" placeholder="Example: Physics Laboratory" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label id="purpose">Purpose of Application:</label>
+                    <label><input type="checkbox" name="purpose[]" value="Maintenance"> Maintenance</label>
+                    <label><input type="checkbox" name="purpose[]" value="Recovery"> Recovery</label>
+                    <label><input type="checkbox" name="purpose[]" value="Borrowing"> Borrowing</label>
+                    <label><input type="checkbox" name="purpose[]" value="Others"> Others</label>                    
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Details of the Person Collecting</h3>
+                <div class="form-group">
+                    <label id="label-name" for="name">Name of Collector:</label>
+                    <input type="text" id="name" name="name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label id="label-year" for="year">Year:</label>
+                    <input type="number" id="year" name="year" placeholder="Year" required>
+                </div>
+                <div class="form-group">
+                    <label id="label-date" for="borrow_date">Date of Equipment Collection:</label>
+                    <input type="date" id="borrow_date" name="borrow_date" required>
+                </div>
+                <div class="form-group">
+                    <label id="label-icNumber" for="user_id">Matric Number:</label>
+                    <input type="number" id="user_id" name="user_id" placeholder="Example: 900101-14-5678" required>
+                </div>
+                <div class="form-group">
+                    <label id="label-phoneNumber" for="phone_num">Phone:</label>
+                    <input type="text" id="phone_num" name="phone_num" placeholder="Example: 012-3456789" required>
+                </div>
+                <div class="form-group">
+                    <label id="label-supervisor" for="supervisor">Supervisor:</label>
+                    <input type="text" id="supervisor" name="supervisor" placeholder="Example: Ms. Siti Mariam" required>
+                </div>
+                <div class="form-group">
+                    <label id="signature" for="signature">Signature:</label>
+                    <input type="file" id="signature" name="signature" required>
+                </div>
+            </div>
+            <div class="submit-button">
+                <button type="submit" id="next-btn">NEXT</button>
+            </div>
+        </form>
+    </div>
+    
+    <footer>
+        &copy; 2025 Copyright. All Rights Reserved. | by GROUP 1
+    </footer>
+    <script>
+        function changeLanguage(language) {
+            const translations = {
+                bm: {
+                    headerTitle: "SISTEM TEMPAHAN PERALATAN MAKMAL CCSE",
+                    adminLogin: "Log Masuk Admin",
+                    formTitle: "Borang Permohonan Peralatan",
+                    labName: "Nama Makmal / Bilik / Tempat:",
+                    purposeOfApplication: "Tujuan Permohonan:",
+                    maintenance: "Penyelenggaraan",
+                    recovery: "Pemulihan",
+                    borrowing: "Peminjaman",
+                    others: "Lain-lain",
+                    name: "Nama Pengambil:",
+                    year: "Tahun:",
+                    dateOfCollection: "Tarikh Pengambilan Peralatan:",
+                    matricNumber: "No. Matrik:",
+                    phone: "Telefon:",
+                    supervisor: "Penyelia:",
+                    next: "Seterusnya",
+                },
+                eng: {
+                    headerTitle: "CCSE LAB EQUIPMENT BOOKING SYSTEM",
+                    adminLogin: "Admin Login",
+                    formTitle: "Application Form for Equipment",
+                    labName: "Name of Laboratory / Room / Place:",
+                    purposeOfApplication: "Purpose of Application:",
+                    maintenance: "Maintenance",
+                    recovery: "Recovery",
+                    borrowing: "Borrowing",
+                    others: "Others",
+                    name: "Name of Collector:",
+                    year: "Year:",
+                    dateOfCollection: "Date of Equipment Collection:",
+                    matricNumber: "Matric Number:",
+                    phone: "Phone:",
+                    supervisor: "Supervisor:",
+                    next: "NEXT",
+                }
+            };
+    
+            const text = translations[language];
+    
+            document.getElementById("header-title").textContent = text.headerTitle;
+            document.getElementById("admin-btn").textContent = text.adminLogin;
+            document.getElementById("form-title").textContent = text.formTitle;
+            document.getElementById("label-labName").textContent = text.labName;
+            document.getElementById("purpose").textContent = text.purposeOfApplication;
+            const checkboxLabels = document.querySelectorAll(".checkbox-group label");
+            checkboxLabels[0].textContent = text.maintenance;
+            checkboxLabels[1].textContent = text.recovery;
+            checkboxLabels[2].textContent = text.borrowing;
+            checkboxLabels[3].textContent = text.others;
+            document.getElementById("label-name").textContent = text.name;
+            document.getElementById("label-year").textContent = text.year;
+            document.getElementById("label-date").textContent = text.dateOfCollection;
+            document.getElementById("label-icNumber").textContent = text.matricNumber;
+            document.getElementById("label-phoneNumber").textContent = text.phone;
+            document.getElementById("label-supervisor").textContent = text.supervisor;
+            document.getElementById("next-btn").textContent = text.next;
+        }
+
+        function confirmSubmission() {
+    // Collect all form values to display in the confirmation
+    let labName = document.getElementById("nama-tempat").value;
+    let name = document.getElementById("name").value;
+    let year = document.getElementById("year").value;
+    let borrowDate = document.getElementById("borrow_date").value;
+    let matricNum = document.getElementById("user_id").value;
+    let phoneNum = document.getElementById("phone_num").value;
+    let supervisor = document.getElementById("supervisor").value;
+
+    let confirmationMessage = `
+        Please review your information:
+        
+        - Name of Laboratory / Room / Place: ${labName}
+        - Name of Collector: ${name}
+        - Year: ${year}
+        - Date of Equipment Collection: ${borrowDate}
+        - Matric Number: ${matricNum}
+        - Phone: ${phoneNum}
+        - Supervisor: ${supervisor}
+        
+        Is everything correct?`;
+    
+    return confirm(confirmationMessage);
+}
+
+
+    </script>
+    
+</body>
+</html>
